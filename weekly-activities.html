@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Weekly Activities | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="For those who want divine decision making done for them">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+
+
+		<body>
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks">0</span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper">
+                
+				<header class="sections">
+				
+                    <div class="page-title">
+					    <h1 class="title bright-purple">Weekly Activities</h1>
+					</div>
+					<div class="page-information">
+						<p>For those who want divine decision making done for them.</p>
+					</div>
+
+				</header>
+				
+				<main class="sections">
+				
+					<button id="FlipCoin" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons new">Coin flip</button>
+						<div id="Show-coin-flip" class="show-more">
+						    <div class="more-details">
+							   <div onclick="audio.play();Count();" id="coin">
+								  <div class="side-a"><img class="coin-image" src="images/Heads.jpeg" alt="Heads"></div>
+								  <div class="side-b"><img class="coin-image" src="images/Tails.jpeg" alt="Tails"></div>
+								</div>
+								<h3>Heads or Tails?</h3>
+							</div>
+						</div>
+						
+					<button id="Magic8-ball" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Magic 8-ball</button>
+						<div id="Show-magic-8ball" class="show-more">
+						    <div class="more-details">
+							   <p>Ask a question then activate the Magic 8-ball to see what it has to say.</p>
+							   <p>Be sure to concentrate very hard on your question.</p>
+							   <div class="magic-ball-container">
+							        <div class="mb-outer" id="mb-container">
+								       <div class="mb-inner">
+									       <h3 class="magic-ball" id="response">8</h3>
+								       </div>
+									</div>
+								</div>
+								<small>Credit to Aadesh Kulkarni from Git Hub</small>
+							</div>
+						</div>
+						
+					<button id="SpinTheWheel" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Spin the wheel</button>
+						<div id="Show-spin-the-wheel" class="show-more">
+						    <p>Spin the Wheel to determine what you need to concentrate/focus your energy on this week</p>
+							<div class="more-details spin-the-wheel-wrapper">
+								<div class="wheel-container">
+									<div class="one">Health</div>
+									<div class="two">Finances</div>
+									<div class="three">Family</div>
+									<div class="four">Work</div>
+									<div class="five">Leisure</div>
+									<div class="six">Future</div>
+								</div>
+									<span class="mid"></span>
+									<button onclick="audio.play();Count();SpinWheel();" class="white-button" id="spin">Spin</button>
+									<div class="stoper">
+								</div>
+							</div>
+						</div>
+						
+					<button id="ShowWish" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Make a wish</button>
+						<div id="Show-wish-div" class="show-more">
+						    <div class="more-details">
+							   <p>Squint your eyes really tight, <br> make a wish, then...</p>
+							   <input type="button" id="GrantWish" class="white-button" value="Push the Button" onclick="audio.play();Count();showWishSuccessful();">
+							   <div id="wish-successful">
+							      <p class="bright-purple">Your wish has been granted!</p>
+							   </div>
+							</div>
+						</div>
+						
+					
+				
+				    <button id="ShowMO" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Mysterious box</button>
+						<div id="Show-mysterious-object" class="medium-width">
+						
+						    <p>Push the Mysterious box to open bonuses</p>
+						    <div class="more-details mystery-box-wrapper">
+							   
+								<div id="cube" class="h-40 w-40 relative cursor-pointer">
+									<div class="hexagon absolute"></div>
+									<div class="cube back h-40 w-40 absolute top-0 left-0"></div>
+									<div class="cube top h-40 w-40 absolute top-0 left-0"></div>
+									<div class="cube left h-40 w-40 absolute top-0 left-0"></div>
+									<div class="cube right h-40 w-40 absolute top-0 left-0"></div>
+									<div class="powerup absolute"></div>
+								</div>
+							</div>
+							
+						</div>
+				
+					<button id="LottoNumbers" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Lottery numbers</button>
+						<div id="Show-LottoNumbers" class="show-more">
+							<div  class="more-details">
+							   <p>Generate lottery numbers - why is this better than easy pick tickets? Because it's <b>you</b> pushing the buttons to 
+							   generate each number AND you can tweak the numbers. Combine that with 'Press for luck' and you got yourself a chance...</p>
+							   
+								<form name="rn">
+								    <div class="lotto-number-row">
+										<div class="number-output" id="Ln1"></div>
+										<input type="button" class="white-button" value="First number" onclick="Random1();audio.play();Count();">
+									</div>
+									<div class="lotto-number-row">
+										<div class="number-output" id="Ln2"></div>
+										<input type="button" class="white-button" value="Second number" onclick="Random2();audio.play();Count();">
+									</div>
+									<div class="lotto-number-row">
+										<div class="number-output" id="Ln3"></div>
+										<input type="button" class="white-button" value="Third number" onclick="Random3();audio.play();Count();">
+									</div>
+									<div class="lotto-number-row">
+										<div class="number-output" id="Ln4"></div>
+										<input type="button" class="white-button" value="Fourth number" onclick="Random4();audio.play();Count();">
+									</div>
+									<div class="lotto-number-row">
+										<div class="number-output" id="Ln5"></div>
+										<input type="button" class="white-button" value="Fifth number" onclick="Random5();audio.play();Count();">
+									</div>
+									<div class="lotto-number-row">
+										<div class="number-output" id="Ln6"></div>
+										<input type="button" class="white-button" value="Sixth number" onclick="Random6();audio.play();Count();">
+									</div>
+									<div class="lotto-number-row">
+										<div class="number-output" id="Ln7"></div>
+										<input type="button" class="white-button" value="Seventh/Supp" onclick="Random7();audio.play();Count();">
+									</div>
+									<div class="lotto-number-row">
+										<div class="number-output" id="Ln8"></div>
+										<input type="button" class="white-button" value="PowerBall/Supp" onclick="Random8();audio.play();Count();">
+									</div>
+								</form>
+								
+								<p>Now take your phone to your favourite Lottery outlet and get buying those tickets! Good luck!</p>
+							   
+								
+							</div>
+						</div>
+					
+					<button id="ShowLuck" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Press for luck</button>
+						<div id="Show-defender-details" class="show-more">
+							
+							<div class="more-details">
+							   <p>Congratulations - you will have good luck for the rest of the day!</p>
+							   
+							</div>
+						</div>
+					
+					<button id="ShowDM" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Divine message</button>
+					
+					<div id="Show-divine-message" class="show-more">
+								 
+						<div class="more-details">
+						   <p>This button push generates random characters, what will happen if you see an articulate sentence?</p>
+						   <p>A divine message maybe?</p>
+						  
+						   <div><p id="RandomSentence" class="bright-purple">test</p></div>
+						   
+						   <input type="button" class="white-button" value="Refresh Mystery Words" onclick="audio.play();Count();Refresh()">
+						</div>
+						
+					</div>
+					
+					<button id="Poll" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Simple poll</button>
+						<div id="Show-simple-poll" class="show-more">
+						    <div class="more-details">
+							    <p>Simple poll for when people are at the same location. Good for the lunch room or board room at work.</p>
+							    <p>To add your top 3 poll choices, update the black text input boxes and pass the phone/device around to all participants.</p>
+								<h3>Total votes: <span id="Show-poll-count">0</span></h3>
+								
+							    <div id="choices">
+								  <div class="choice">
+									<div class="result">
+									  <h3 id="Show-poll-count-1">&nbsp;</h3>
+									  <div class="bar" data-choice="1"></div>
+									</div>
+									<div class="label">
+									  <input class="text-center" type="text" placeholder="Pizza">
+									 
+									  <button onclick="audio.play();Count();PollCount();PollCountChoice1();" class="small-wire-btn" data-choice="1">Vote</button>
+									</div>
+								  </div>
+								  <div class="choice">
+									<div class="result">
+									  <h3 id="Show-poll-count-2">&nbsp;</h3>
+									  <div class="bar" data-choice="2"></div>
+									</div>
+									<div class="label">
+									  <input class="text-center" type="text" placeholder="Tacos">
+									  
+									  <button onclick="audio.play();Count();PollCount();PollCountChoice2();" class="small-wire-btn" data-choice="2">Vote</button>
+									</div>
+								  </div>
+								  <div class="choice">
+									<div class="result">
+									  <h3 id="Show-poll-count-3">&nbsp;</h3>
+									  <div class="bar" data-choice="3"></div>
+									</div>
+									<div class="label">
+									  <input class="text-center" type="text" placeholder="Burgers">
+									  
+									  <button onclick="audio.play();Count();PollCount();PollCountChoice3();" class="small-wire-btn" data-choice="3">Vote</button>
+									</div>
+								  </div>
+								</div>
+							</div>
+						</div>
+
+				</main>
+				
+				<div class="sections level-up">
+                   
+				    <div class="award-items">
+						<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+						<small>Level up with every 10 button pushes</small>
+					</div>
+					
+				</div>
+				
+			</div>
+				
+			<footer>
+			
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					  <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+			<script>
+
+				$("#ShowWish").click(function(){
+				  $("#Show-wish-div").toggle();
+				  $("#ShowWish").attr('disabled', 'disabled');
+				  $("#ShowWish").addClass('disabled');
+				});
+
+				$("#LottoNumbers").click(function(){
+				  $("#Show-LottoNumbers").toggle();
+				  $("#LottoNumbers").attr('disabled', 'disabled');
+				  $("#LottoNumbers").addClass('disabled');
+				});
+
+				$("#ShowLuck").click(function(){
+				  $("#Show-defender-details").toggle();
+				  $("#ShowLuck").attr('disabled', 'disabled');
+				  $("#ShowLuck").addClass('disabled');
+				});
+				
+				$("#ShowMO").click(function(){
+				  $("#Show-mysterious-object").toggle();
+				   $("#ShowMO").attr('disabled', 'disabled');
+				  $("#ShowMO").addClass('disabled');
+				});
+				
+				$("#ShowDM").click(function(){
+				  $("#Show-divine-message").toggle();
+				  $("#ShowDM").attr('disabled', 'disabled');
+				  $("#ShowDM").addClass('disabled');
+				});
+				
+				$("#FlipCoin").click(function(){
+				  $("#Show-coin-flip").toggle();
+				  $("#FlipCoin").attr('disabled', 'disabled');
+				  $("#FlipCoin").addClass('disabled');
+				});
+				
+				$("#Poll").click(function(){
+				  $("#Show-simple-poll").toggle();
+				  $("#Poll").attr('disabled', 'disabled');
+				  $("#Poll").addClass('disabled');
+				});
+				
+				$("#SpinTheWheel").click(function(){
+				  $("#Show-spin-the-wheel").toggle();
+				   $("#SpinTheWheel").attr('disabled', 'disabled');
+				  $("#SpinTheWheel").addClass('disabled');
+				});
+				
+				$("#Magic8-ball").click(function(){
+				  $("#Show-magic-8ball").toggle();
+				   $("#Magic8-ball").attr('disabled', 'disabled');
+				  $("#Magic8-ball").addClass('disabled');
+				});
+				
+				// Coin flip
+				$('#coin').on('click', function(){
+					var flipResult = Math.random();
+					$('#coin').removeClass();
+					setTimeout(function(){
+					  if(flipResult <= 0.5){
+						$('#coin').addClass('heads');
+						console.log('it is head');
+					  }
+					  else{
+						$('#coin').addClass('tails');
+						console.log('it is tails');
+					  }
+					}, 100);
+				  });
+				
+				//Spin the wheel
+				let container = document.querySelector(".wheel-container");
+				let btn = document.getElementById("spin");
+				let number = Math.ceil(Math.random() * 10000);
+
+				let flash = document.querySelector(".wheel-container div");
+
+
+				function SpinWheel() {
+				  container.style.transform = "rotate(" + number + "deg)";
+				  number += Math.ceil(Math.random() * 10000);
+
+				}
+				
+				// Make a wish
+				function showWishSuccessful() {
+					document.getElementById('wish-successful').style.display = "block";
+					  $("#GrantWish").attr('disabled', 'disabled');
+					  $("#GrantWish").addClass('disabled');
+				}
+				
+				// Generate random sentence
+				function makeid() {
+					var text = "";
+					var possible = "ABCDEFGaHIiiJKaLMaNOoPeQRSeTeUuuVWeXYZ.,  !";
+
+					for (var i = 0; i < 15; i++)
+						text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+					return text;
+
+				}
+
+				document.getElementById("RandomSentence").innerHTML = makeid();
+
+				function Refresh() {
+					document.getElementById("RandomSentence").innerHTML = makeid();
+				}
+				
+				//Magic 8-ball
+				const options = [
+				  'It is certain',
+				  'It is decidedly so',
+				  'Without a doubt',
+				  'Yes definitely',
+				  'You may rely on it',
+				  'As I see it, yes',
+				  'Most likely',
+				  'Outlook good',
+				  'Yes',
+				  'Signs point to yes',
+				  'Reply hazy, try again',
+				  'There is a chance',
+				  'Better not tell you now',
+				  'Cannot predict now',
+				  'Concentrate and ask again',
+				  "Don't count on it",
+				  'My reply is no',
+				  'My sources say no',
+				  'Outlook not so good',
+				  'Very doubtful'
+				]
+				const magicBall=document.getElementById("mb-container")
+				const response=document.getElementById("response")
+
+
+				magicBall.addEventListener("click",function(){
+					response.textContent="8";
+					response.style.fontSize='8rem';
+					magicBall.className='mb-outer animateNow';
+					const index=Math.floor(Math.random()*20)
+					const message=options[index];
+					setTimeout(()=>{
+						response.textContent=message;
+						response.style.fontSize='16px';
+						magicBall.className='mb-outer';
+					},3000)
+				});
+				
+            </script>
+			<script src="js/mystery-cube.js"></script>
+			<script src="js/simple-poll.js"></script>
+			
+        </body>
+	
+    </html>
+

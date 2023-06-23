@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+		
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Listen Speak | Listen Speak</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="prototype for a political influence site">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+
+
+		<body>
+		
+			<div class="header">
+			
+			    <div class="navigation">
+				
+				    <a href="/serenity.html"><div class="hamburger-menu">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div></a>
+				 
+				</div>
+				<div class="title">
+				 
+				    <h1 class="white App-main-title">Listen |<span class="gold"> Speak</span></h1>
+				 
+				</div>
+				<div class="login-area">
+				    
+					<div class="OpenAI circle-icon">
+				 
+				        <img class="menu-icons" src="images/Friends.svg" title="AI assistancee" alt="AI">
+				 
+				    </div>
+					<div class="Notifications circle-icon">
+				 
+				        <img class="menu-icons" src="images/news.svg" title="notifications" alt="notifications">
+				 
+				    </div>
+					<div class="login circle-icon">
+				 
+				        <img class="menu-icons" src="images/Login.svg" title="login" alt="Login">   
+				 
+				    </div>
+				 
+				</div>
+			
+			</div>
+		
+		    <div class="centered-container spL-page-content">
+			
+			    <div class="live-feed-controls-wrapper">
+				
+				    <div class="live-feed-controls">
+					
+					    <p>LIVE</p>
+					 
+					</div>
+					<div class="live-feed-controls">
+					
+					    <p>Started: 9:30pm EST</p>
+					 
+					</div>
+					<div class="live-feed-controls">
+					
+					    <p>Ends: 10:30pm EST</p>
+					 
+					</div>
+					<div class="live-feed-controls">
+					
+					    <p>Speaker: John Jones</p>
+					 
+					</div>
+					<div class="live-feed-controls">
+					
+					    <p>Topic: Wealth Distribution</p>
+					 
+					</div>
+					<div class="live-feed-controls">
+					
+					    <p>Up next: "AI concerns for the future"</p>
+					 
+					</div>
+					<div class="live-feed-controls">
+					
+					    <p>Location: Brisbane Australia</p>
+					 
+					</div>
+				
+				
+				</div>
+		
+				<iframe class="fluid-video" src="https://www.youtube.com/embed/7ljxSDCOl_k" title="YouTube video player"></iframe>
+				
+				<h2 class="white text-center">Speak to a selected political audience to voice your opinions <br> and ideas to strive towards a better world.</h2>
+				<main class="sections">
+				
+					<button id="ShowBook" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Book your Speech</button>
+					<div id="Show-Book-your-speech" class="show-more">
+						<div class="more-details left-align">
+							<form>
+								<h4>Location</h4>
+								<select class="ls-location">
+									<option>Select your location</option>
+									<option>Australia</option>
+									<option>England</option>
+									<option>United States</option>
+									<option>Australia</option>
+									<option>England</option>
+									<option>United States</option>
+									<option>Australia</option>
+									<option>England</option>
+								</select>
+								
+								<h4>Proposed date</h4>
+								<input type="date" id="SpeechDate" name="SpeechDate">
+								
+								<h4>Topic/name of speech</h4>
+								<input type="text"/>
+								
+							    <button class="white-button align-center" onclick="audio.play()">Save + Continue</button>
+						    </form>
+						</div>
+					</div>
+					<button id="ShowInvite" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Invite your audience</button>
+					<div id="Show-Invite-audience" class="show-more">
+						<div  class="more-details">
+						   <p>What do I need here?</p>
+						   <p></p>
+							
+						</div>
+					</div>
+					
+					
+					<button id="ShowSpeak" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Have your say</button>
+					<div id="Show-Have-your-say" class="show-more">
+						<div class="more-details">
+						    <p>What do I need here?</p>
+							<p></p>
+						</div>
+					</div>
+					
+				</main>
+				
+				<div class="categories">
+                   
+				    <div class="popular cat-tiles">
+					
+					    <p>Popular</p>
+						
+					</div>
+					<div class="popular cat-tiles">
+					
+					    <p>Trending</p>
+						
+					</div>
+					<div class="popular cat-tiles">
+					
+					    <p>Wealth Distribution</p>
+						
+					</div>
+					<div class="popular cat-tiles">
+					
+					    <p>Cost of Living</p>
+						
+					</div>
+					<div class="popular cat-tiles">
+					
+					    <p>General</p>
+						
+					</div>
+
+				</div>
+			
+			</div>
+			
+				
+			<!--<footer>
+				<div class="footer-menu black">
+				    <div class="footer-menu-items">
+					    <a href="serenity.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Friends" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Friends"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					    <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>-->
+			
+		    <script>
+				
+			    $("#ShowBook").click(function(){
+				  $("#Show-Book-your-speech").toggle();
+				  $("#ShowBook").attr('disabled', 'disabled');
+				  $("#ShowBook").addClass('disabled');
+				});
+				
+				$("#ShowInvite").click(function(){
+				  $("#Show-Invite-audience").toggle();
+				  $("#ShowInvite").attr('disabled', 'disabled');
+				  $("#ShowInvite").addClass('disabled');
+				});
+				
+				$("#ShowSpeak").click(function(){
+				  $("#Show-Have-your-say").toggle();
+				  $("#ShowSpeak").attr('disabled', 'disabled');
+				  $("#ShowSpeak").addClass('disabled');
+				});	
+				
+            </script>
+			
+        </body>
+
+    </html>
+

@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Personal Protection | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Defender, Yellow Beacon and Emergency PWA apps to protect yourself and others">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+
+
+		<body>
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper">
+                
+				<header class="sections">
+				
+                    <div class="page-title">
+					    <h1 class="title bright-green">Personal Protection</h1>
+					</div>
+					
+					<div class="page-information">
+					    <p>Protect yourself and/or help others with these Progressive Web Apps (PWAs).</p>
+						<img class="rounded-image equal-button-width" src="images/PWA-install.png" alt="Personal Protection Apps">
+						<p></p>
+					</div>
+
+				</header>
+				
+				<main class="sections">
+				
+					<button id="ShowDF" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Defender</button>
+					<div id="Show-defender-details" class="show-more">
+						<div  class="more-details">
+						   <img class="App-icon" src="images/Defender-icon.svg" alt="Defender">
+						   <p>The Defender App creates a convincing screen showing that Police have been alerted and are 2 minutes away.</p>
+						   <p>This is a <span class="gold">preventative or pre-emptive action</span> designed or having the power to deter or prevent an anticipated situation or occurrence.</p>
+						   <h3 id="Show-defender-information">How Defender works</h3>
+						   <div id="Show-more-defender-information">
+							   <p>Defender is useful for home invasions or when your out and about. Designed to make your antagonist panic and retreat.</p>
+							  
+							   <p>For example, if your in a dangerous situation where you are unable to call Police or Emergency, or for some reason are unable to speak or communicate, then showing
+							   your antogonist the Defender screen would confuse them and they would assume that this app somehow has sensed danger and notified the Police.</p>
+							   <p>Alternatively for a home invasion, you might not want to confront them incase they are armed or on drugs, so the action would be ring Police first then
+							   set the desktop or TV screen to Defender mode. This is if you hear them breaking in and have time to do this (would work best with Google Home voice command for example)
+							   otherwise your phone Defender screen is Plan B.</p>
+							   <p>This would also be effective to be integrated into your home alarm system when you're not home as an added deterrent.</p>
+						   </div>
+						   <img class="rounded-image" src="images/Defender-graphic.png" alt="Defender Graphic">
+						   <p>*Important - installing to your device makes Defender work offline, much more streamlined and easier to access.</p>
+						   <p>Apple users will not see this prompt so they can add to home screen as instructed on the <a href="custom-home.html">'Custom'</a> page (bottom menu)</p>
+						   <img class="rounded-corners" src="images/Defender-Install.png" alt="Install Defender">
+						   <form method="get" action="https://defender.pushthebuttons.com/">
+						   <button class="white-button" onclick="audio.play();Count();">Launch Defender</button>
+						   </form>
+						   <small class="clear">Exclusive to PTB | *PWA Installable</small>
+						   
+						</div>
+					</div>
+					<button id="ShowYB" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Yellow Beacon</button>
+					<div id="Show-yellow-beacon-details" class="show-more">
+						<div class="more-details">
+						   <img class="App-icon" src="images/Yellow-Beacon-icon-512.svg" alt="Yellow Beacon">
+						   <p>Yellow Beacon is a very simple concept. This App creates a full yellow glowing screen to identify yourself and flag others:</p>
+						   <ul class="left-align">
+							   <li>Hold up in a crowd to be spotted by your friends</li>
+							   <li>Use as a flag in certain situations</li>
+							   <li>Other reasons we cant think of yet</li>
+						   </ul>
+						   
+						   <img class="rounded-image" src="images/YB-Graphic.png" alt="Yellow Beacon">
+						   <p>*Important - installing to your device makes Yellow Beacon work offline, much more streamlined and easier to access.</p>
+						   <p>Apple users will not see this prompt so they can add to home screen as instructed on the <a href="custom-home.html">'Custom'</a> page (bottom menu)</p>
+						   <form method="get" action="https://yellowbeacon.pushthebuttons.com/">
+						   <button class="white-button" onclick="audio.play();Count();">Launch Yellow Beacon</button>
+						   </form>
+						   <small class="clear">Exclusive to PTB | *PWA Installable</small>
+						</div>
+					</div>
+					
+					<button id="ShowEA" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Emergency</button>
+					<div id="Show-emergency-app-details" class="show-more">
+						<div  class="more-details">
+						   <img class="App-icon" src="images/Emergency-icon.svg" alt="Emergency">
+						   <p>The Emergency App can be used for emergencies and to report crime (not life threatening)</p>
+						   <p>Features include:</p>
+						   <ul class="left-align">
+							   <li>Get location prompt</li>
+							   <li>Local police and Crimestoppers number at the click of a button</li>
+							   <li>Currently only Australian version available - US and UK versions coming soon.</li>
+						   </ul>
+						   <p>*Important - installing to your phone makes Emergency work offline, much more streamlined and easier to access.</p>
+						   <p>Apple users will not see this prompt so they can add to home screen as instructed on the <a href="custom-home.html">'Custom'</a> page (bottom menu)</p>
+						   <p>Please note: <span class="gold">the official (Australian) Emergency app is available to download on the app store.</span></p>
+						   <form method="get" action="https://Emergency.pushthebuttons.com/">
+						   <button class="white-button" onclick="audio.play();Count();">Launch Emergency</button>
+						   </form>
+						   <small class="clear">Not exclusive to PTB | *PWA Installable | Phone only</small>
+						</div>
+					</div>
+				
+					<button id="ShowSP" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Self preservation</button>
+					<div id="Show-self-preservation-details" class="show-more">
+						<div class="more-details">
+						   <p>Feeling depressed, anxious or any other type of upsetting feelings can be very tough to manage.</p>
+						   <p>Just know this - the suffering can end and will end soon if you take the steps or start the process to combat the bad feelings.</p>
+						   <p>It may feel hopeless at this point in time, but from experience if you take steps and avoid the triggers, you can come out the other side and never look back.</p>
+						   <hr class="spacing-line-divider">  
+						   <img class="App-icon" src="images/bb-logo.png" alt="Beyond Blue">
+						   <p class="gold">Australia - Beyond Blue</p>
+						   <p>Need support or information around depression and anxiety, for yourself, a friend or family member?</p><br>
+						   <a href="tel:1300224636" class="white-button margin-top">Call 1300 22 4636</a>
+						   <hr class="spacing-line-divider">
+						   <img class="App-icon" src="images/Lifeline.png" alt="Lifeline">
+						   <p class="gold">United States of America - Lifeline</p>
+						   <p>If you’re thinking about suicide, are worried about a friend or loved one, or would like emotional support, 
+						   the Lifeline network is available 24/7 across the United States.</p><br>
+						   <a href="tel:988" class="white-button margin-top">Call 988</a>
+						   <hr class="spacing-line-divider">
+						   <img class="App-icon" src="images/spuk-logo.jpg" alt="Suicide Prevention UK">
+						   <p class="gold">United Kingdom - Suicide Prevention UK</p>
+						   <p>Supporting those at risk of suicide throughout the UK</p><br>
+						   <a href="tel:08006895652" class="white-button margin-top">Call 0800 689 5652</a>
+						</div> 
+					</div>
+					
+					
+					
+					<!---to be released once content is added-->
+					<!--<button id="ShowSD" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons new hidden">Personal safety devices</button>
+					<div id="Show-personal-safety-devices" class="medium-width">
+						<div class="more-details">
+						   <p>List out the best and most practical safety devices</p>
+						   <iframe src="https://www.safewise.com/blog/personal-safety-devices-for-every-situation/"></iframe>
+						</div>
+					</div>-->
+					
+					
+				</main>
+				
+				<div class="sections level-up">
+                   
+				    <div class="award-items">
+						<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+						<small>Level up with every 10 button pushes</small>
+					</div>
+
+				</div>
+				
+			</div>
+				
+			<footer>
+			
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+			<script>
+				
+				$("#ShowEA").click(function(){
+				  $("#Show-emergency-app-details").toggle();
+				  $("#ShowEA").attr('disabled', 'disabled');
+				  $("#ShowEA").addClass('disabled');
+				});
+				
+				$("#ShowYB").click(function(){
+				  $("#Show-yellow-beacon-details").toggle();
+				  $("#ShowYB").attr('disabled', 'disabled');
+				  $("#ShowYB").addClass('disabled');
+				});
+				
+				$("#ShowDF").click(function(){
+				  $("#Show-defender-details").toggle();
+				  $("#ShowDF").attr('disabled', 'disabled');
+				  $("#ShowDF").addClass('disabled');
+				});
+				
+				$("#Show-defender-information").click(function(){
+				  $("#Show-more-defender-information").toggle();
+				});
+				
+				$("#ShowSP").click(function(){
+				  $("#Show-self-preservation-details").toggle();
+				  $("#ShowSP").attr('disabled', 'disabled');
+				  $("#ShowSP").addClass('disabled');
+				});
+				
+				$("#ShowSD").click(function(){
+				  $("#Show-personal-safety-devices").toggle();
+				  $("#ShowSD").attr('disabled', 'disabled');
+				  $("#ShowSD").addClass('disabled');
+				});
+
+				
+            </script>
+			
+			
+        </body>
+	
+    </html>
+

@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Zombie Apocolypse | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Zombie survival tips and Zombie art competition">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+		
+		<body class="zombie-desktop-background">
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper no-background">
+                
+				<header class="sections no-padding-bottom">
+				
+                    <div class="page-title">
+					    <h1 class="title bright-orange">Zombie Apocolypse</h1>
+					</div>
+
+				</header>
+				
+				
+				<main class="sections no-padding-top">
+					
+					<p class="no-margins">This isnt just about surviving a Zombie Apocolypse, it also includes:</p>
+					
+					<ul class="left-align two-column">
+					   <li>Pandemic</li>
+					   <li>Comet strike</li>
+					   <li>Civil or world war</li>
+					   <li>Alien invasion</li>
+					</ul>
+					
+					<button id="ShowZA" onclick="playZombieGrowl();Count();" class="button-with-superpowers multiple-buttons">Zombie Artworks</button>
+					<div id="Show-zombie-art" class="show-more">
+						<div class="more-details">
+						   <p>Upload your original Zombie art and it will be included in the exclusive PTB "Zombie Gallery".</p>
+						  
+						   <img class="Zombie-alive-image" src="images/Zombie-Art.png" alt="zombie art">
+						   <script src="https://form.jotform.com/jsform/223237963466060"></script>
+						   <p>There will be button push bonuses for those who partake...</p>
+						</div>
+					</div>
+					<button id="ShowGUI" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Survival Guides</button>
+					<div id="Show-zombie-guide" class="show-more">
+						<div  class="more-details">
+						    <p>Here are 2 great Survival Guides that we handpicked for you to download and print out just to be prepared.</p>
+							<p>The first guide is the official US Army Survival Guide with everything covered, its very extensive and highly recommended to download and print out.</p>
+						    <form method="get" action="PDF/Ultimate-Survival-Guide.pdf" target="_blank">
+							   <button class="white-button" onclick="audio.play();Count();">Ultimate Survival Guide</button>
+							</form>
+							<p>And of course as promised, the Zombie Survival Guide "Complete Protection from the Living Dead" by Max Brooks</p>
+							<form method="get" action="PDF/Zombie-Survival-Guide.pdf" target="_blank">
+							   <button class="white-button" onclick="audio.play();Count();">Zombie Survivial Guide</button>
+							</form>
+						</div>
+					</div>
+					<button id="ShowGall" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Zombie Gallery</button>
+					<div id="Show-zombie-gallery" class="show-more">
+						<div  class="more-details">
+						    <p>This is the place where you will see your uploaded Zombie Artworks, and recieve +200 pushes for your troubles!</p>
+							<div class="zombie-gallery-image">
+								<img class="full-size-image" src="images/Zombie-Gallery/zombies_by_ragmanjones.jpg" alt="zombie art">
+								<div class="caption">'Zombies' by Ragman Jones</div>
+							</div>
+							<div class="zombie-gallery-image">
+								<img class="full-size-image" src="images/Zombie-Gallery/Zombie-land.jpg" alt="zombie art">
+								<div class="caption">'Zombie land' by Greg MKS</div>
+							</div>
+						</div>
+					</div>
+					<button id="ShowZG" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons special">Zombie Shooter</button>
+					<div id="Show-zombie-game" class="show-more">
+						<div  class="more-details">
+						    <p>Fantastic Zombie Shooter by Elior Tabeka</p>
+						    <p>Shoot the Zombies in the head then reload your gun! Tap or click the Zombie's heads to kill them!</p>
+						    <h4 class="bright-orange">Every Zombie killed adds to your global push total!</h4>
+						    <form method="get" action="Zombie-Mayhem/index.html">
+							  <button class="white-button" onclick="audio.play();Count();">Play Zombie Mayhem</button>
+							</form>
+						</div>
+					</div>
+					<button id="ShowZC" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Zombie Comics</button>
+					<div id="Show-zombie-comics" class="medium-width">
+						<div class="more-details">
+						   <p>Grimm Fairy Tales Presents Zombies – The Cursed #1 – 3 (2013)</p>
+						   <img class="full-size-image" src="Comics/Zombies-The-Cursed-Issue1-Cover.png" alt="Zombie Comics">
+						   <br>
+						   <img class="full-size-image" src="Comics/Zombies-The-Cursed-Issue1-Page1.png" alt="Zombie Comics">
+						   <br>
+						   <img class="full-size-image" src="Comics/Zombies-The-Cursed-Issue1-Page2.png" alt="Zombie Comics">
+						   <!--<embed type="media/epub" class="zombie-comics-book" src="EBooks/Grimm-Zombie-Fairy-Tales-1.epub">-->
+						   <!--<embed class="zombie-comics-pdf" src="Documents/Grimm-Zombie-Fairy-Tales-1.pdf">-->
+						   <br><br>
+						   <button id="show-comic-score" class="white-button" onclick="audio.play();Count();">More Pages Please!</button>
+						   <div id="comics-score">
+						       <p class="gold">Thankyour for your upvote!</p>
+						   </div>
+						   <div class="disclaimer-text">
+						   <small>The above button will be monitored by us and if there are enough unique clicks, we will invest in presenting in an ebook format for a better experience.</small>
+						   </div>
+						   <br><br>
+						</div>
+					</div>
+					<button id="ShowZV" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">This week's video</button>
+					<div id="Show-zombie-video" class="medium-width">
+						<div class="more-details">
+						<iframe class="responsive-video" src="https://www.youtube.com/embed/OEBVVVTNFAY"></iframe>
+
+						</div>
+					</div>
+				</main>
+				
+				<div class="sections level-up">
+                   
+				    <div class="award-items">
+						<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+						<small>Level up with every 10 button pushes</small>
+					</div>
+				
+				</div>
+				
+			</div>
+
+			<footer>
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+			<script>
+			    
+					var playZombieGrowl = function() {
+					  var sound4 = new Audio('sounds/Zombie-growl.mp3');
+					  sound4.play();
+					}
+				
+				
+				$("#ShowGUI").click(function(){
+				  $("#Show-zombie-guide").toggle();
+				   $("#ShowGUI").attr('disabled', 'disabled');
+				  $("#ShowGUI").addClass('disabled');
+				});
+				
+				$("#ShowZA").click(function(){
+				  $("#Show-zombie-art").toggle();
+				   $("#ShowZA").attr('disabled', 'disabled');
+				  $("#ShowZA").addClass('disabled');
+				});
+				
+				$("#ShowGall").click(function(){
+				  $("#Show-zombie-gallery").toggle();
+				   $("#ShowGall").attr('disabled', 'disabled');
+				  $("#ShowGall").addClass('disabled');
+				});
+				
+				$("#ShowZC").click(function(){
+				  $("#Show-zombie-comics").toggle();
+				   $("#ShowZC").attr('disabled', 'disabled');
+				  $("#ShowZC").addClass('disabled');
+				});
+				
+				$("#ShowZG").click(function(){
+				  $("#Show-zombie-game").toggle();
+				   $("#ShowZG").attr('disabled', 'disabled');
+				  $("#ShowZG").addClass('disabled');
+				});
+				
+				$("#ShowZV").click(function(){
+				  $("#Show-zombie-video").toggle();
+				   $("#ShowZV").attr('disabled', 'disabled');
+				  $("#ShowZV").addClass('disabled');
+				});
+				
+				$("#show-comic-score").click(function(){
+				  $("#comics-score").toggle();
+				   $("#show-comic-score").attr('disabled', 'disabled');
+				  $("#show-comic-score").addClass('disabled');
+				});
+				
+            </script>
+			
+			
+        </body>
+	
+    </html>
+

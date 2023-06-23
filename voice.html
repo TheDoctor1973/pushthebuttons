@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Voice activation | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Survival tips and Zombie art competition">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js"></script>
+			
+			<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&display=swap');
+			.speech {
+				width: 300px;
+				padding: 0;
+				margin: 0;
+			  }
+			  .speech input {
+				border: 0;
+				width: 240px;
+				padding-left: 10px;
+				display: inline-block;
+			  }
+			  .speech img {
+				float: right;
+				width: 40px;
+				margin-top:5px;
+				cursor:pointer;
+			  }
+			</style>
+
+		</head>
+		
+		<body>
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper no-background">
+                
+				<header class="sections no-padding-bottom">
+				
+                    <div class="page-title">
+					    <h1 class="title">Voice Activation</h1>
+						
+					</div>
+
+				</header>
+				
+				
+				<main class="leaderboard-section">
+				
+					<form id="labnol" method="get" action="https://www.google.com/search">
+					  <div class="speech">
+						<input type="text" name="q" id="transcript" placeholder="Speak" />
+						<img onclick="startDictation()" src="images/Voice-activation.svg" />
+					  </div>
+					</form>
+					<small>Currently in development</small>
+				    <p>voice recognition software to navigate this website is voxpow.com</p>
+				</main>
+				
+			
+				
+			</div>
+
+			<footer>
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="index.html"><img class="menu-icons" src="images/Voice-activation.svg" alt="Voice"></a>
+					   <small>Voice</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+			<script>
+			
+			    document.getElementById("masterclicks").innerHTML = counter;
+				
+				$("#ShowPTB").click(function(){
+				  $("#Show-information").toggle();
+				  $("#ShowPTB").attr('disabled', 'disabled');
+				  $("#ShowPTB").addClass('disabled');
+				});
+				
+				$("#ShowRN").click(function(){
+				  $("#Show-release-notes").toggle();
+				  $("#ShowRN").attr('disabled', 'disabled');
+				  $("#ShowRN").addClass('disabled');
+				});
+				
+				//Speech recognition API
+				
+				function startDictation() {
+					if (window.hasOwnProperty('webkitSpeechRecognition')) {
+					  var recognition = new webkitSpeechRecognition();
+
+					  recognition.continuous = false;
+					  recognition.interimResults = false;
+
+					  recognition.lang = 'en-US';
+					  recognition.start();
+
+					  recognition.onresult = function (e) {
+						document.getElementById('transcript').value = e.results[0][0].transcript;
+						recognition.stop();
+						document.getElementById('labnol').submit();
+					  };
+
+					  recognition.onerror = function (e) {
+						recognition.stop();
+					  };
+					}
+				  }
+				
+				
+            </script>
+			
+        </body>
+	
+    </html>
+

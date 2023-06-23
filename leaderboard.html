@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Leaderboard | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Push the Buttons Leaderboard for a chance to earn some money">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js"></script>
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+		
+		<body>
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper no-background">
+                
+				<header class="sections no-padding-bottom">
+				
+                    <div class="page-title">
+					    <h1 class="title">Leaderboard</h1>
+					</div>
+
+				</header>
+				
+				
+				<main class="leaderboard-section">
+					<div class="login-details">
+						<p>Once PTB has officially launched, users can login to secure their push total.</p>
+						
+						<p>Top 10 users go into the PTB Shareholder Club, and <span class="gold">top 3</span> are eligible for a higher percentage.</p>
+						<small class="dark-text">*This leaderboard has not been developed and user names are just placeholders.</small>
+						
+						<a class="login-btn" href="login.html">login</a>
+					</div>
+					
+					<div class="leaderboard-container">
+					
+					    <div class="leaderboard-header">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>#</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>Username</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>Button Pushes</p>
+					
+					        </div>
+					
+					    </div>
+					
+					    <div class="leaderboard-row currentUser">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>#</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p id="userid">My Button Push total</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p id="leaderboard-count">0</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row gold">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>1</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>PowderBoy</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>1,937</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row gold">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>2</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>CheifTannerBrown</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>1,432</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row gold">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>3</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>Thor_23</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>1,239</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>4</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>Nice_going_DeNiro</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>1,2222</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>5</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>JohhnyRogers69</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>1,2162</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>6</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>Gandalf6789</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>1,120</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>7</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>Puzzle.Hero</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>1,050</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>8</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>SavennTAR</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>978</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>9</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>GariGeshi89</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>923</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-row">
+					
+					        <div class="leaderboard-rank">
+					
+					            <p>10</p>
+					
+					        </div>
+							<div class="leaderboard-name">
+					
+					            <p>TemperTantrum</p>
+					
+					        </div>
+							<div class="leaderboard-pushes">
+					
+					            <p>917</p>
+					
+					        </div>
+					
+					    </div>
+						
+						<div class="leaderboard-footer">
+					
+					        <button class="white-button" onclick="audio.play();">Next</button>
+					
+					    </div>
+					
+					</div>
+					
+				
+				</main>
+				
+				<div class="sections level-up">
+                   
+				    <div class="award-items">
+						<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+						<small>Level up with every 10 button pushes</small>
+					</div>
+					
+				</div>
+				
+			</div>
+
+			<footer>
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+			<script>
+			
+			    //A very crude attempt to get current user counter and name from local storage and put it in position 1 on the leaderboard
+				
+				window.localStorage.getItem('user');
+				document.getElementById("leaderboard-count").innerHTML = counter;
+				
+            </script>
+			
+        </body>
+	
+    </html>
+

@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+		
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Explore the Universe | Aliens, Intelligent life, UAPs, Extraterrestrial</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Aliens, Intelligent life, Greys, Extraterrestrial">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+			
+			<!--SNAP SVG-->
+			<script src="Snap-SVG/snap.svg-min.js"></script>
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+
+
+		<body class="universe-page-background">
+		
+		     <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+			
+			<div id="mind-control-hint" class="Slide-in-left">
+		      <p>Can you work out how to remove the alien mind control to unlock the top secret alien files?</p>
+		    </div>
+
+			<div class="transparent-header">
+
+				<div class="universe-title">
+				
+				    <a href="universe.html"><h1>OUR UNIVERSE</h1></a>	    
+				   
+			    </div>
+				
+				<div class="menu-items">
+
+				    <ul>
+				       
+					    <li><a class="active-menu-item" href="aliens.html">Aliens</a></li>
+					    <li><a href="collective.html">The Collective</a></li>
+					    <li><a href="latest-theories.html">Latest</a></li>
+					   
+				    </ul>
+				   
+			    </div>
+					
+			</div>
+			  
+			
+			<div class="alien-container">
+			 
+				<div class="alien-pagecontent">
+			 
+					<div class="aliensimage">
+					
+					    <svg id="alien-mind-control" width="100%" height="100%" viewBox="0 0 420 20" 
+						preserveAspectRatio="xMidYMid meet"></svg>  
+                    
+							<script>			 
+								
+								var s = Snap("#alien-mind-control");
+								
+								// Alien mind control one:
+								var smallCircle = s.circle(200, 20, 50);
+								// By default its black
+								smallCircle.attr({
+									fill: "#000", 
+									opacity: "0.1",
+									stroke: "#fff",
+									strokeWidth: 5,
+									cursor: "pointer"
+								});
+								
+								
+								var aLoop = function(r) {
+								   var newR = r===50 ? 100 : 50
+								   smallCircle.animate({r:r},1500,function(){
+								   aLoop(newR)
+								   })
+								  
+								} 
+								
+								
+								// Alien mind control two:
+								var mediumCircle = s.circle(200, 20, 100);
+								// By default its black
+								mediumCircle.attr({
+									fill: "#000", 
+									opacity: "0.1",
+									stroke: "#fff",
+									strokeWidth: 6,
+									cursor: "help"
+								});
+								var aLoop2 = function(r) {
+								   var newR = r===100 ? 150 : 100
+								   mediumCircle.animate({r:r},1500,function(){
+								   aLoop2(newR)
+								   })
+								  
+								}
+								
+								
+								// Alien mind control two:
+								var bigCircle = s.circle(200, 20, 150);
+								// By default its black
+								bigCircle.attr({
+									fill: "#000", 
+									opacity: "0.1",
+									stroke: "#fff",
+									strokeWidth: 8,
+									cursor: "help"
+								});
+								var aLoop3 = function(r) {
+								   var newR = r===150 ? 200 : 150
+								   bigCircle.animate({r:r},1500,function(){
+								   aLoop3(newR)
+								   })
+								  
+								}
+								
+								mediumCircle.drag()
+								bigCircle.drag()
+							    aLoop(50)
+								aLoop2(100)
+								aLoop3(150)
+								
+								smallCircle.hover(function(){
+								    this.attr({
+									strokeWidth: 3,
+									opacity: "0.3"
+									})
+									
+								});
+								
+								smallCircle.click(function(){
+								    this.attr({
+									strokeWidth: 1,
+									cursor: "pointer"
+									})
+									
+									window.location = "alien-files.html";
+								  
+								});
+								
+								
+							</script>
+
+							 
+					</div><!--close aliensimage-->
+							 
+				</div>
+	
+			</div>
+				
+				
+			<footer>
+				<div class="footer-menu black">
+				    <div class="footer-menu-items">
+					    <a href="serenity.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Friends" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Friends"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					    <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+        </body>
+
+    </html>
+

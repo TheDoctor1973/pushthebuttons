@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>PTB Login | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Login to secure your push total for the chance to earn money">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			
+			<style>
+			iframe {
+				min-height: 10px;
+			}
+			</style>
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+		
+		<body>
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper no-background">
+                
+				<header class="sections no-padding-bottom">
+				
+                    <div class="page-title">
+					    <h1 class="title">Login</h1>
+					</div>
+
+				</header>
+				
+				<div class="login-details">
+				
+					<small>*Login in development - not available until launch</small>
+				
+				</div>
+				
+				<div class="login-form">
+				
+					<form>
+					 
+					    <input type="text" id="username" name="username" placeholder="Username">
+					  
+					    <input type="password" id="password1" name="password" placeholder="Password">
+					  
+					    <button id="login" onclick="audio.play();" class="button-with-superpowers login-button disabled" disabled>Login</button>
+					    <script src="https://accounts.google.com/gsi/client" async defer></script>
+						<div id="g_id_onload"
+							data-client_id="YOUR_GOOGLE_CLIENT_ID"
+							data-login_uri="https://your.domain/your_login_endpoint"
+							data-auto_prompt="false">
+						</div>
+						<div class="g_id_signin margin-top"
+							data-type="standard"
+							data-size="large"
+							data-theme="outline"
+							data-text="sign_in_with"
+							data-shape="rectangular"
+							data-logo_alignment="left">
+						</div>
+						  
+					</form>
+					
+					<small><a class="forgot-password" href="#">forgot password?</a></small>
+				
+				</div>
+				
+				<div class="register-form">
+				
+				    <div class="register">
+                   
+						<p>First time here? <span id="show-register">Sign up</span></p>
+						
+					</div>
+					
+					<div id="Show-register-form">
+					
+						<form>
+						 
+						  <input type="text" id="name" name="name" placeholder="Username">
+						  
+						  <input type="password" id="password2" name="password" placeholder="Password">
+						  
+						  <input type="password" id="password3" name="Repeat password" placeholder="Repeat Password">
+						  
+						  <button id="register" onclick="audio.play()" class="button-with-superpowers login-button disabled" disabled>Register</button>
+						
+						</form>
+					
+					</div>
+				
+				
+				</div>
+				
+			</div>
+			
+			<div class="sections level-up">
+                   
+				<div class="award-items">
+					<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+					<small>Level up with every 10 button pushes</small>
+				</div>
+			
+			</div>
+
+			<footer>
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					    <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+			<script>
+			
+			    //document.getElementById("masterclicks").innerHTML = counter;
+				
+				$("#show-register").click(function(){
+				  $("#Show-register-form").show();
+				
+				});
+				
+            </script>
+			
+        </body>
+	
+    </html>
+

@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+		
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Picture Puzzle | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Slash the blocks">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+		    <script src="js/buttons.js"></script>
+
+			<style>
+
+				#container {
+				  width: 835px;
+				  height: 400px;
+				  padding: 0;
+				  position: absolute;
+				  top: 8%;
+				  left: 50%;
+				  transform: translate(-48%, 0%);
+				}
+
+				.me {
+				  position: relative;
+				  background-size: 800px 400px;
+				  background-repeat: no-repeat;
+				  display: inline-block;
+				  margin: 2.2px;
+				  margin-top: -0.5px;
+				  border-radius: 10px;
+				  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+				  transition: 0.2s;
+				}
+
+				.full {
+				  height: 400px;
+				  width: 800px;
+				  border-radius: 15px;
+				}
+
+				.me_0 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -0px -0px;
+				}
+
+				.me_1 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -133.33px -0px;
+				}
+
+				.me_2 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -266.66px -0px;
+				}
+
+				.me_3 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -399.99px -0px;
+				}
+
+				.me_4 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -533.32px -0px;
+				}
+
+				.me_5 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -666.65px -0px;
+				}
+
+				.me_6 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -0px -133.33px;
+				}
+
+				.me_7 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -133.33px -133.33px;
+				}
+
+				.me_8 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -266.66px -133.33px;
+				}
+
+				.me_9 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -399.99px -133.33px;
+				}
+
+				.me_10 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -533.32px -133.33px;
+				}
+
+				.me_11 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -666.65px -133.33px;
+				}
+
+				.me_12 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -0px -266.66px;
+				}
+
+				.me_13 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -133.33px -266.66px;
+				}
+
+				.me_14 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -266.66px -266.66px;
+				}
+
+				.me_15 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -399.99px -266.66px;
+				}
+
+				.me_16 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -533.32px -266.66px;
+				}
+
+				.me_17 {
+				  height: 133.33px;
+				  width: 133.33px;
+				  background-position: -666.65px -266.66px;
+				}
+
+				.prevent_click {
+				  pointer-events: none;
+				}
+
+				.correct {
+				  border-radius: 0px;
+				  box-shadow: 0 0 0 transparent, 0 0 0 transparent;
+				  animation: corect 0.5s ease;
+				  animation-delay: 0.2s;
+				}
+
+				@keyframes corect {
+				  0% {
+					transform: scale(1);
+					border-radius: 10px;
+					box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+				  }
+				  50% {
+					transform: scale(1.25);
+					border-radius: 5px;
+					box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+				  }
+				  100% {
+					transform: scale(1);
+					border-radius: 0px;
+					box-shadow: 0 0 0 transparent, 0 0 0 transparent;
+				  }
+				}
+				.pre_img {
+				  margin-top: 10px;
+				  width: 100%;
+				  position: absolute;
+				  left: 100px;
+				}
+
+				.pre_img li {
+				  display: inline-block;
+				  list-style: none;
+				}
+
+				.pre_img ul li img {
+				  width: 150px;
+				  height: 75px;
+				  position: relative;
+				  cursor: pointer;
+				}
+
+				.cover {
+				  display: none;
+				  position: absolute;
+				  background-color: rgba(0, 0, 0, 0.38);
+				  width: 100%;
+				  height: 100%;
+				  z-index: 9999;
+				}
+
+				.score {
+				  margin: 13% auto;
+				  padding: 20px;
+				  background: #fff;
+				  border-radius: 10px;
+				  border: 1px solid #666;
+				  width: 255px;
+				  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+				  position: relative;
+				}
+
+				#scr_head {
+				  text-align: center;
+				  font-weight: 600;
+				  font-size: 30px;
+				  color: #3d3d3d;
+				}
+
+				#scr_time {
+				  text-align: center;
+				  font-weight: 600;
+				  font-size: 22px;
+				  color: #3d3d3d;
+				}
+
+				#scr_moves {
+				  text-align: center;
+				  font-weight: 600;
+				  font-size: 22px;
+				  color: #3d3d3d;
+				}
+
+				.start {
+				  position: absolute;
+				  top: 50%;
+				  left: 50%;
+				  transform: translate(-50%, -50%);
+				  padding: 18px 45px;
+				}
+
+				.reset {
+				  position: absolute;
+				  margin: 0 auto;
+				  padding: 18px 45px;
+				  left: 50%;
+				  transform: translate(-50%, 120px);
+				}
+
+				.OK {
+				  padding: 8px 25px;
+				  float: right;
+				  cursor: pointer;
+				}
+
+				.button {
+				    padding: 15px 25px;
+					font-size: 24px;
+					font-family: 'Montserrat', sans-serif;
+					text-align: center;
+					touch-action: manipulation;
+					cursor: pointer;
+					outline: none;
+					text-decoration:none;
+					min-width:200px;
+					z-index: 999;
+					color: #fff;
+					background-color: #008B8B;
+					border: none;
+					border-radius: 15px;
+					box-shadow: 0 9px #006666;
+					transition: all 0.1s;
+					-webkit-transition: all 0.1s;
+				}
+
+				.button:active {
+				    background-color: #00b3b3;
+					box-shadow: 0 5px #333;
+				}
+
+				.i {
+				  text-align: center;
+				  font-weight: 550;
+				  color: #3c3c3c;
+				}
+				
+				/* Mobile dimensions */
+				
+				@media (max-width:600px) {
+				
+					#container {
+					  width: 427px;
+					  height: 200px;
+					  transform: translate(-50%, 0%);
+					}
+					
+					.me {
+					  background-size: 400px 200px;
+					}
+
+					.full {
+					  height: 200px;
+					  width: 400px;
+					  border-radius: 8px;
+					}
+
+					.me_0 {
+					  height: 66.66px;
+					  width: 66.66px;
+					}
+
+					.me_1 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -66.66px -0px;
+					}
+
+					.me_2 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -133.33px -0px;
+					}
+
+					.me_3 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -200px -0px;
+					}
+
+					.me_4 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -266.66px -0px;
+					}
+
+					.me_5 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -333.33px -0px;
+					}
+
+					.me_6 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -0px -66.66px;
+					}
+
+					.me_7 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -66.66px -66.66px;
+					}
+
+					.me_8 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -133.33px -66.66px;
+					}
+
+					.me_9 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -200px -66.66px;
+					}
+
+					.me_10 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -266.66px -66.66px;
+					}
+
+					.me_11 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -333.33px -66.66px;
+					}
+
+					.me_12 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -0px -133.33px;
+					}
+
+					.me_13 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -66.66px -133.33px;
+					}
+
+					.me_14 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -133.33px -133.33px;
+					}
+
+					.me_15 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -200px -133.33px;
+					}
+
+					.me_16 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -266.66px -133.33px;
+					}
+
+					.me_17 {
+					  height: 66.66px;
+					  width: 66.66px;
+					  background-position: -333.33px -133.33px;
+					}
+					
+					.pre_img {
+					  left: 0px;
+					}
+
+					.pre_img ul li img {
+					  width: 75px;
+					  height: 37.5px;
+					}
+				}
+			</style>
+			
+		</head>
+		
+		<body>
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+
+			<div id="container">	
+				<a href="#" onclick="audio.play();Count();" class="button start">Start</a>
+				<div class="box">	
+					<div class="me full"></div>
+				</div>
+				<div class="pre_img">	
+				    <ul>
+						<li data-bid="0"><img src="images/kfp.png" alt="KungFu Panda"></li>
+						<li data-bid="1"><img src="images/minion.png" alt="Minions"></li>
+						<li data-bid="2"><img src="images/ab.jpg" alt="Angry Birds"></li>	
+					    <li data-bid="3" id="upfile1"><img src="images/upload.png" alt="upload your own image"></li>
+						
+					</ul>
+					<input type="file" name="image" id="file1" style="display: none">
+				</div>
+				<div style="text-align:center"><a href="#" onclick="audio.play();Count();" class="button reset">Reset</a>
+				</div>
+				<div style="text-align:center"><small>touch/click two squares to swap positions</small></div>
+			</div>
+
+			<div class="cover" >
+				<div class="score">
+					<p id="scr_head"> SOLVED!</p>
+					<p id="scr_time"> Time : <span id="min">00</span> Min <span id="sec">00</span> Sec</p>
+					<p id="scr_moves"> Moves : <span id="moves"></span></p>
+					<p class="i">try uploading your own picture!</p>
+					<div class="button OK">OK</div>
+				</div>
+			</div>
+			
+            <footer>
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="challenge.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Friends" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html"><img class="menu-icons" src="images/news.svg" alt="Latest news"></a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			<script>
+			document.getElementById("masterclicks").innerHTML = counter;
+			</script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+			<script src="js/picture-puzzle.js"></script>
+			
+		</body>
+		
+	</html>

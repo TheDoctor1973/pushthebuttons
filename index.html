@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+    <html lang="en" id="welcome-screen-only" class="welcome-screen-height">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+			<meta name="description" content="Push the Buttons is a Progressive Web App (PWA) where users can earn money and uncover useful,
+			hopeful, practical and random content.">
+		    <title>Push the Buttons | Have you pushed the buttons today?</title>
+			<link rel="canonical" href="https://pushthebuttons.com/">
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+            <link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			<!--<script src="js/web-badging.js" defer></script>-->
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+
+
+		<body class="home-page">
+		
+		    <div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-1">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div>
+		
+		    <div class="flex-wrapper">
+                
+				<header id="HideMe" class="sections">
+				
+                    <div class="opening-title">
+					    <h1 class="home-title">Have you pushed the buttons today?</h1>
+						
+					</div>
+
+				</header>
+				
+				<div id="HideTheButton" class="home-button-flex">
+                   
+					<button id="click" onclick="audio.play();Count();showDiv();hidePushButton();hideStuff();" class="button-with-superpowers">Push the Button</button>
+					
+				</div>
+				
+				<main class="home-page-flex">
+				
+					<div id="welcomeDiv" class="hidden">
+					
+						<h2 class="page-title margin-auto spacing-top-10px">So Many Activities!</h2>
+						
+						<div class="Activity-board">
+						
+							<a onclick="audio.play();Count();" class="neon-btn bright-green" href="personal-protection.html">Personal Protection</a>
+							
+							<a onclick="audio.play();Count();" class="neon-btn bright-aqua" href="serenity.html">Serenity & Knowledge</a>
+							
+							<a onclick="audio.play();Count();" class="neon-btn bright-purple no-margin-right" href="weekly-activities.html">Weekly Activities</a>
+							
+						</div>
+						<div class="Activity-board">
+							
+							<a id="level-five-reveal" onclick="audio.play();Count();" class="neon-btn level-five locked" href="zombie.html">Unlocks at Level 5</a>
+							
+							<a id="level-ten-reveal" onclick="audio.play();Count();" class="neon-btn level-ten locked" href="challenge.html">Unlocks at Level 10</a>
+							
+							<a id="level-twenty-reveal" onclick="audio.play();Count();" class="neon-btn level-twenty locked no-margin-right" href="world-domination.html">Unlocks at Level 20</a>
+							
+						</div>
+						<div class="Activity-board">
+							
+							<a id="level-launch-reveal" class="neon-btn level-launch locked" href="#">Unlocks on Launch</a>
+							
+							<a id="level-fifty-reveal" class="neon-btn level-fifty locked" href="#">Unlocks Post Launch</a>
+							
+							<a id="level-hundred-reveal" class="neon-btn level-hundred locked" href="#">Unlocks Post Launch</a>
+							
+						</div>
+					
+					</div>
+					
+				</main>
+				
+			    <div class="sections level-up no-padding-top">
+                   
+				    <div class="award-items">
+						<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+						<small>Level up with every 10 button pushes</small>
+					</div>
+					
+				</div>
+				
+			</div>
+				
+			<footer>
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+				
+				
+			<script>
+				
+				document.addEventListener('DOMContentLoaded', function () {
+				
+					if (counter >= 50) {
+					   document.getElementById("level-five-reveal").innerHTML = "Zombie Apocalypse"
+					   $(".level-five").addClass('levelfive-unlocked');
+			           $(".level-five").removeClass('locked');
+				    }
+		
+				});
+				
+				document.addEventListener('DOMContentLoaded', function () {
+				
+					if (counter >= 100) {
+					   document.getElementById("level-ten-reveal").innerHTML = "Challenge Time"
+					   	$(".level-ten").addClass('levelten-unlocked');
+			            $(".level-ten").removeClass('locked');
+					}
+		
+				});
+				
+				document.addEventListener('DOMContentLoaded', function () {
+				
+					if (counter >= 200) {
+					   document.getElementById("level-twenty-reveal").innerHTML = "PTB Shareholder"
+					   $(".level-twenty").addClass('leveltwenty-unlocked');
+			           $(".level-twenty").removeClass('locked');
+					}
+		
+				});
+				
+				
+			</script>
+			
+
+        </body>
+	
+    </html>
+

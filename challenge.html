@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Challenge time | Push the Buttons</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Challenging games and competitions with a chance to earn money">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+		
+		<body>
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper no-background">
+                
+				<header class="sections no-padding-bottom">
+				
+                    <div class="page-title">
+					    <h1 class="title bright-turqouise">Challenge Time</h1>
+					</div>
+					<div class="page-information">
+						<p>Take on these challenges to test your skills and mental fortitude. Those challenges marked with "PUSH+" mean as you play, your total pushes increase!</p>
+						<p>Check back for NEW Challenges.</p>
+					</div>
+
+				</header>
+				
+				
+				<main class="sections">
+					
+					<button id="ShowTB" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons special">Tower Blocks</button>
+					<div id="Show-tower-blocks" class="show-more">
+						<div  class="more-details">
+						    <p>This should be familiar no? Yep its the classic "Stack" block building game cloned by Steve Gardiner</p>
+							<form method="get" action="towerblocks.html">
+							   <button class="white-button" onclick="audio.play();Count();">Play Tower Blocks</button>
+							</form>
+						</div>
+					</div>
+					<button id="ShowDANTE" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Dante</button>
+					<div id="Show-dante-game" class="show-more">
+						<div  class="more-details">
+						    <p>This is an amazing game developed by Salvatore Previti. Push count added for every Soul saved (coming soon)</p>
+						    <p>Play as Dante, catch all the lost evil souls and bring them for eternal punishment.</p>
+							<p>You can play Top View or First Person, and switch between the two any time from the menu.</p>
+							<table class="table-data">
+								<tr> 
+									<td>
+										<h4>Top view:</h4>
+										<p>Esc: menu</p>
+										<p>WASD/arrow: move</p>
+										<p class="gold">Touch screen: invisible joystick, tap to interact</p>
+										<p>Gamepad supported, A to interact</p>
+									</td>
+									
+								</tr>
+							</table>
+							<table class="table-data">
+								<tr> 
+									
+									<td>
+										<h4>First person:</h4>
+										<p>Esc: menu</p>
+										<p>WASD/arrow: move/strafe</p>
+										<p>Mouse to look around (or right gamepad stick)</p>
+										<p class="gold">Touch screen: invisible joysticks (left movement, right look around) tap to interact</p>
+										<p>Gamepad supported, A to interact</p>
+									</td>
+								</tr>
+							</table>
+							<form method="get" action="dante.html">
+							   <button class="white-button" onclick="audio.play();Count();">Play Dante</button>
+							</form>
+						</div>
+					</div>
+					<button id="ShowTC" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">The Cube</button>
+					<div id="Show-the-cube" class="show-more">
+						<div class="more-details">
+						    <p>Can you solve the Cube?</p>
+							<p> If you can you get bonus <span class="gold">+200 pushes</span> to your total!</p>
+							<p>A Brilliant Pen by Boris Šehovac.</p>
+							<form method="get" action="the-cube.html">
+							   <button class="white-button" onclick="audio.play();Count();">Launch The Cube</button>
+							</form>
+						 
+						</div>
+					</div>
+					<button id="ShowME" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons">Menja</button>
+					<div id="Show-menja" class="show-more">
+						<div  class="more-details">
+						   <p>Slash your way to victory. Another superb pen by Caleb Miller.</p>
+							<form method="get" action="menja.html">
+							   <button class="white-button" onclick="audio.play();Count();">Play Menja</button>
+							</form>
+						</div>
+					</div>
+					
+					
+					<button id="ShowPP" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons special">Picture Puzzle</button>
+					<div id="Show-picture-puzzle" class="show-more">
+						<div class="more-details">
+						    <p>Picture puzzle game developed by Mayur Birle in Code Pen. Adapted for mobile by yours truly.</p>
+							<form method="get" action="picture-puzzle.html">
+							   <button class="white-button" onclick="audio.play();Count();">Play Picture Puzzle</button>
+							</form>
+						</div>
+					</div>
+					<button id="ShowQM" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons special">Clumsy Bird</button>
+					<div id="Show-quiz-master" class="show-more">
+						<div class="more-details">
+						    <p>Clumsy Bird is a clone of the infamous "Flappy Bird".</p>
+							<form method="get" action="ClumsyBird/Clumsy-Bird.html">
+							   <button class="white-button" onclick="audio.play();Count();">Play Clumsy Bird</button>
+							</form>
+						</div>
+					</div>
+					<button id="ShowSPAM" onclick="audio.play();Count();" class="button-with-superpowers multiple-buttons special">Button Spam</button>
+					<div id="Show-button-spam" class="show-more">
+						<div class="more-details">
+						    <p>You get 5 seconds to push the round button as quickly as you can!</p>
+							<p>Time starts from your first push...</p>
+							<div class="sections">
+								<button id="Spam-button-lock" class="spam-button" onclick="audio.play();Count();SpamCount();"></button>
+								<h3 id="Show-spam-count">0</h3>
+							</div>
+						</div>
+					</div>
+				</main>
+				
+				<div class="sections level-up">
+                   
+				    <div class="award-items">
+						<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+						<small>Level up with every 10 button pushes</small>
+					</div>
+					
+				</div>
+				
+			</div>
+
+			<footer>
+			
+			    <div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+			
+			<script>
+					
+				$("#ShowTB").click(function(){
+				  $("#Show-tower-blocks").toggle();
+				  $("#ShowTB").attr('disabled', 'disabled');
+				  $("#ShowTB").addClass('disabled');
+				});
+				
+				$("#ShowTC").click(function(){
+				  $("#Show-the-cube").toggle();
+				  $("#ShowTC").attr('disabled', 'disabled');
+				  $("#ShowTC").addClass('disabled');
+				});
+				
+				$("#ShowME").click(function(){
+				  $("#Show-menja").toggle();
+				  $("#ShowME").attr('disabled', 'disabled');
+				  $("#ShowME").addClass('disabled');
+				});
+				
+				$("#ShowDANTE").click(function(){
+				  $("#Show-dante-game").toggle();
+				  $("#ShowDANTE").attr('disabled', 'disabled');
+				  $("#ShowDANTE").addClass('disabled');
+				});
+				
+				$("#ShowQM").click(function(){
+				  $("#Show-quiz-master").toggle();
+				  $("#ShowQM").attr('disabled', 'disabled');
+				  $("#ShowQM").addClass('disabled');
+				});
+				
+				$("#ShowPP").click(function(){
+				  $("#Show-picture-puzzle").toggle();
+				  $("#ShowPP").attr('disabled', 'disabled');
+				  $("#ShowPP").addClass('disabled');
+				});
+				
+				$("#ShowSPAM").click(function(){
+				  $("#Show-button-spam").toggle();
+				  $("#ShowSPAM").attr('disabled', 'disabled');
+				  $("#ShowSPAM").addClass('disabled');
+				});
+				
+				// Spam the Button	
+				$("#Spam-button-lock").click(function(){
+					setTimeout(function() {
+					  $(".spam-button").attr('disabled', 'disabled');
+					  $(".spam-button").addClass('disabled');
+					},5000);
+				});	
+				
+            </script>
+			
+        </body>
+	
+    </html>
+

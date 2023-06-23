@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+    <html lang="en">
+
+		<head>
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		 
+		    <title>Push the Buttons | Custom</title>
+			
+			<!-- GO AHEAD AND PUSH THE BUTTONS -->
+			
+			<meta name="description" content="Customise your PTB content">
+		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="theme-color" content="#008B8B">
+			
+			<link rel="manifest" href="manifest.webmanifest">
+			<script src="sw.js"></script>
+		 
+		    <link rel="shortcut icon" href="images/favicon.ico">
+			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			
+			<script src="js/buttons.js" defer></script>
+			
+			
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T62S02EZ83"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-T62S02EZ83');
+			</script>
+
+		</head>
+
+
+		<body>
+		
+		    <a href="activities.html"><div class="total-pushes-master">
+			   <div class="level-counter">
+				   <img class="level-icon" src="images/level-up-icon-colour.svg" alt="level-0">
+				   <span id="masterclicks"></span>
+			   </div>
+			   <div class="level-up-text"><span id="level-up-value"></span></div>
+			</div></a>
+		
+		    <div class="flex-wrapper">
+
+				<header class="sections">
+				
+                    <div class="page-title">
+					    <h1 class="title">Custom Settings</h1>
+					</div>
+					
+				</header>
+				
+				<main class="sections no-padding-top">
+				    <div class="medium-width">
+						<h2 class="gold">PTB is PWA</h2>
+						<p>Push the Buttons is a fully functional Progressive Web App (PWA), which means you can access content offline just like an app downloaded from the app store.</p>
+						<p>Installing to your device powers up your experience and also means you can see when 'NEW' buttons are released thanks to the Web Badging and push notification APIs:</p>
+						<img class="rounded-image small-image" src="images/web-badging.png" alt="web badging PWA">
+						<!-- Install button, hidden by default -->
+						<div id="installContainer" class="hidden">
+						  <button id="butInstall" type="button" class="white-button">Install to your device</button>
+						</div>
+						<p>The Personal Protection page has 3 standalone PWA apps that can be installed to your device for quick and easy access,
+						just look for the install prompt when you launch them.</p>
+						<p>These apps are crucial to your personal safety.</p>
+						
+						<p>Defender, Yellow Beacon and Emergency.</p>
+						<img class="rounded-image small-image" src="images/PWA-install.png" alt="Personal Protection Apps">
+						<p>iPhones do not support the PWA install prompt (sigh), so if your on your iPhone device you will have to hit the 'Share' button and then Add to Home Screen (rude)</p>
+						<img class="rounded-image small-image" src="images/Add-to-home-screen-IOS.png" alt="Install to Apple Phone home screen">
+						<h3>"Way to ruin the experience iPhone"</h3>
+						<img class="rounded-image small-image" src="images/Napoleon_dynamite.jpg" alt="Sweet">
+				    </div>
+	                <p>If you want to reset your push count, click this button (only available pre-launch)</p>
+					<button id="click" onclick="audio.play();ResetCount();window.location.reload();" class="white-button margin-top">Reset Button Pushes</button>
+					<small><span class="warning">WARNING</span> - this will reset your button pushes and unlocked areas.</small>
+					<br>
+					<a href="index.html">Welcome Screen</a>
+					<br>
+					
+				</main>
+				
+				<div class="sections level-up">
+                   
+				    <div class="award-items">
+						<img class="level-icon" src="images/Award-0.svg" alt="level-0">
+						<small>Level up with every 10 button pushes</small>
+					</div>
+					
+				</div>
+
+				
+			</div>
+			
+			<footer>
+			
+				<div class="footer-menu">
+				    <div class="footer-menu-items">
+					    <a href="activities.html"><img class="menu-icons" src="images/HomeV2.svg" alt="Activities"></a>
+						<small>Activities</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="custom-home.html"><img class="menu-icons" src="images/Custom.svg" alt="Settings" title="Set your custom home page"></a>
+					   <small>Custom</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="leaderboard.html"><img class="menu-icons" src="images/Friends.svg" alt="Leaderboard"></a>
+					   <small>Leaderboard</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="login.html"><img class="menu-icons" src="images/Login.svg" alt="Login"></a>
+					   <small>Login</small>
+					</div>
+					<div class="footer-menu-items">
+					   <a href="news.html">
+					       <div class="update-bubble-parent">
+						   <div class="update-bubble"><img class="menu-icons" src="images/news.svg" alt="Latest news"></div>
+						   </div>
+					   </a>
+					   <small>News</small>
+					</div>
+				</div>
+			
+			</footer>
+
+			<script src="js/Add-to-homescreen.js" defer></script>
+            
+			
+        </body>
+
+    </html>
+
